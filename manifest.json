@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "ReplyPal: Your AI Copilot for Whatsapp, Gmail & AutoResponder assistant",
+  "description": "Write emails, messages, summarize articles and more using ChatGPT AI. Works on all sites. Grow your SMM!",
+  "version": "3.5",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://*.openai.com/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "settings.html"
+  },
+  "permissions": [
+    "storage","contextMenus"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentChat.js",
+        "contentSettings.js",
+        "contentMain.js",
+        "contentPanel.js",
+        "contentSelector.js",
+        "contentButton.js",
+        "Utility.js",
+        "backgroundAI.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "default_locale": "en"
+}

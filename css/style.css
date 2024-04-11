@@ -1,0 +1,281 @@
+/*
+Theme Name: Style for ChatGPT Assistant
+Theme URI: https://site.brutalstrike.net/
+Author: Anderson Clayton
+Author URI: https://websytes.com.br
+Description: Stylesheet for ChatGPT plugin AI Assistant
+Version: 0.2 - 04/2023
+*/
+
+body { 
+	font-family: system-ui,-apple-system,"Segoe UI",BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	margin: auto;
+	padding: 10px;
+	overflow: auto;
+	background: linear-gradient(315deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
+	background-attachment: fixed;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+@media (hover: none) {
+    .container {
+      background: rgb(255 255 255 / 90%);
+    }
+  }
+.container {
+	background: rgb(255 255 255 / 50%); 
+	border-radius: 2px;
+	display: block;
+	position: relative;
+	margin: 1rem auto;
+	padding: 10px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: none;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: 20px;
+}
+.container:hover {
+	background: rgb(255 255 255 / 90%); /* ##ffffffe6 */
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.logo {
+    position: absolute;
+    top: -24px;
+    left: calc(50% - 24px);
+}
+h1 {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+p.msg {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+
+
+.social {
+    /*background: #232323;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 0 30px 0;
+}
+.social a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+}
+.cardBox {
+    perspective: 500px;
+    margin: 30px;
+    transform: scale(2);
+    -webkit-transform: scale(2);
+}
+.card {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    transform-style: preserve-3d;
+    transition: 1s;
+    /*box-shadow: 0px 30px 30px rgb(0, 0, 0, 0.5);*/
+    /*box-shadow: 0 5px 15px 0 rgb(0 0 0 / 30%);*/
+    box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 20%);
+    border-top-left-radius: 20%;
+    border-top-right-radius: none;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: 20%;
+    color: #FFF;
+}
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    color: #FFF;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center
+}
+.card-back {
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center
+}
+.cardBox:hover .card {
+    transform: rotateY(180deg);
+}
+.card-back {
+    transform: rotateY(180deg);
+}
+.discord {
+    background: #5865f2;
+}
+.reddit {
+    background: #ff5700;
+}
+.telegram {
+    background: #0088cc;
+}
+.messenger {
+    background: #006AFF;
+}
+.whatsapp {
+    background: #25d366;
+}
+.gmail {
+    background: #ea4335;
+}
+.twitter {
+    background: #1da1f2;
+}
+
+
+/* <select> styles */
+select {
+	/* Reset */
+	-webkit-appearance: none;
+	 -moz-appearance: none;
+		  appearance: none;
+	border: 0;
+	outline: 0;
+	font: inherit;
+	/* Personalize */
+	/*width: 100%;*/
+	width: calc(100% - 20px);
+	height: 30px;
+	padding: 0 30px 0 10px;
+	/*background: url(down.svg) no-repeat right 8px center/16px, linear-gradient(to left, rgb(52 73 94 / 90%) 2em, rgb(44 62 80 / 67%) 2em);*/
+	background: #fff url(down-black.svg) no-repeat right 8px center/12px;
+	color: #000;
+	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	/*border-radius: 0.25em;*/
+    border-top-left-radius: 12px;
+    border-top-right-radius: none;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: 12px;
+	display: block;
+	margin: 0 auto 10px auto;
+}
+select option {
+    color: #000;
+    background-color: #f3f3f3;
+}
+select:focus {
+	outline: none;
+}
+select::-ms-expand {
+	display: none;
+}
+
+textarea {
+	/* Reset */
+	-webkit-appearance: none;
+	 -moz-appearance: none;
+		  appearance: none;
+	border: 0;
+	outline: 0;
+	font: inherit;
+	/* Personalize */
+	width: calc(100% - 40px);
+	height: 40px;
+	padding: 10px;
+	/*background-color: rgb(52 73 94 / 90%);*/
+	background-color: #fff;
+	color: #000!important;
+	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	/*border-radius: 0.25em;*/
+    border-top-left-radius: 12px;
+    border-top-right-radius: none;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: 12px;
+	display: block;
+	margin: 10px auto 10px auto;
+}
+textarea::placeholder {
+  /*color: rgba(255, 255, 255, 0.5);*/
+  color: rgba(0, 0, 0, 0.5);
+}
+
+label, span {
+    display: block;
+    font-size: 12px;
+    margin: 10px 0 5px 0;
+    text-align: center;
+}
+
+
+.one-column,
+.two-column {
+    width: 100%;
+}
+.three-column {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.one-column .column {
+    width: calc(100% - 20px);
+	padding: 0 10px;
+}
+.two-column .column {
+    width: calc(49% - 20px);;
+    display: inline-block;
+	padding: 0 10px;
+}
+.three-column .column {
+    width: calc(33% - 9px);
+    display: inline-block;
+	padding: 0 5px;
+}
+.three-column select {
+    width: calc(100% - 10px);
+}
+
+label.switch {
+    display: inline-block;
+}
+
+div#menu-item {
+    background-color: rgb(243 243 243 / 50%);
+    padding: 0 0 10px 0;
+    font-weight: bold;
+    border-top-left-radius: 20px;
+    border-top-right-radius: none;
+    border-bottom-left-radius: none;
+    border-bottom-right-radius: 20px;
+    font-size: 12px;
+    margin: 5px 10px 5px 10px;
+    text-align: center;
+    border: 1px dashed #000;
+}
+
+

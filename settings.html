@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Extension Options</title>
+    
+    <style>
+        body {
+            width: 900px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            white-space: pre; /* don't wrap the text */
+        }
+    </style>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Settings</h1>
+
+<label for="gpt-api-key">GPT API Key:</label>
+<input id="gpt-api-key" name="gpt-api-key" type="text">
+
+<label for="gpt-api-url">GPT API url:</label>
+<input id="gpt-api-url" name="gpt-api-url" type="text">
+
+<label for="gpt-model">GPT API model:</label>
+<input id="gpt-model" name="gpt-model" type="text">
+
+<label for="template-select">Select Template:</label>
+<select id="template-select" name="template-select"></select>
+<button id="duplicate-btn">Clone</button>
+<button id="delete-btn" hidden>Delete</button>
+<label for="template-title">Title:</label>
+<input id="template-title" name="template-title" type="text" readonly>
+<label for="template-icon">Icon:</label>
+<input id="template-icon" name="template-icon" type="text" readonly>
+<label for="template">Template:</label><br>
+<textarea id="template" name="template" readonly></textarea>
+
+<br><input id="toggle-orb" name="toggle-orb" type="checkbox">Don't show orb on text selection
+<br><br>
+<script src="chrome.js?1"></script>
+<script src="contentSettings.js?1"></script>
+<script src="settings.js"></script>
+</body>
+</html>

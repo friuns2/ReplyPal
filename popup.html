@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+    <title>Popup</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/fontawesome.min.css" rel="stylesheet">
+	<link href="css/brands.min.css" rel="stylesheet">
+	<script src="chrome.js"></script>
+	<script src="contentSettings.js"></script>
+	<script src="Utility.js"></script>
+	
+</head>
+<body style="width: 480px;">
+	<script src="popup.js"></script>
+
+<div class="container">
+
+	<img src="icons/icon48.png" class="logo">
+    <p>Please <a href="https://platform.openai.com/account/api-keys">login</a> and copy Api Key to <a href="settings.html">Settings</a></p>
+
+	<h1>GPT 4 Chat</h1>
+	<p class="msg">Supported messengers</p>
+
+	<div class="social">
+		<div class="cardBox">
+			<div class="card discord">
+				<div class="card-front">
+					<a href="https://discord.com/channels/">
+						<i class="fa-brands fa-discord"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://discord.com/channels/">
+						Discord
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cardBox">
+			<div class="card reddit">
+				<div class="card-front">
+					<a href="https://www.reddit.com/r/GPT4Chat/">
+						<i class="fa-brands fa-reddit-alien"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://www.reddit.com/r/GPT4Chat/">
+						Reddit
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cardBox">
+			<div class="card telegram">
+				<div class="card-front">
+					<a href="https://web.telegram.org/a/">
+						<i class="fa-brands fa-telegram"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://web.telegram.org/a/">
+						Telegram
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cardBox pc">
+			<div class="card messenger">
+				<div class="card-front">
+					<a href="https://www.messenger.com/">
+						<i class="fa-brands fa-facebook-messenger"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://www.messenger.com/">
+						Messenger
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cardBox pc">
+			<div class="card whatsapp">
+				<div class="card-front">
+					<a href="https://web.whatsapp.com/">
+						<i class="fa-brands fa-whatsapp"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://web.whatsapp.com/">
+						WhatsApp
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cardBox pc">
+			<div class="card gmail">
+				<div class="card-front">
+					<a href="https://mail.google.com/">
+						<i class="fa-brands fa-google"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://mail.google.com/">
+						Gmail
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cardBox">
+			<div class="card twitter">
+				<div class="card-front">
+					<a href="https://twitter.com/Home/">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://twitter.com/Home/">
+						Twitter
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="cardBox">
+			<div class="card twitter">
+				<div class="card-front">
+					<a href="https://www.linkedin.com/">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+				<div class="card-back">
+					<a href="https://www.linkedin.com/">
+						LinkedIn
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="one-column" style="display: none">
+		<div class="column">
+			<select id="gpt-version" aria-label="GPT Version"></select>
+		</div>
+	</div>
+
+	<div class="two-column">
+		<div class="column">
+			<label for="language-select">Language:</label>
+			<select id="language-select"></select>
+		</div>
+
+		<div class="column">
+			<label for="template-select">Template:</label>
+			<select id="template-select" name="template-selector"></select>
+		</div>
+	
+	</div>
+
+
+	<div class="one-column">
+		<div class="column">
+			<div id="menu-item" style="display:none;">
+				Developer mode:
+				<label class="switch">
+					<input type="checkbox" id="writeLog">
+					Write Log
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="dynamic-settings" class="three-column">
+		<!--<div class="one-column">
+			<div class="column">
+				<textarea placeholder="act like"></textarea>
+			</div>
+		</div>-->
+	</div>
+
+</div>
+
+</body>
+</html>
