@@ -2,4 +2,4 @@ ReplyPal is a game-changing web extension that provides an innovative solution t
 
 https://www.youtube.com/watch?v=bUmuaFvO_uw
 
-To Install: Open Chrome Extensions, Enable Developer mode and drag [extension zip file](https://github.com/friuns2/ReplyPal/archive/refs/tags/ReplyPal.zip) to Chrome Extensions window
+To Install: Download [Extension](https://github.com/friuns2/ReplyPal/archive/refs/tags/ReplyPal.zip), Open Chrome Extensions, Enable Developer mode and drag zip file to Chrome Extensions window
